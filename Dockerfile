@@ -4,8 +4,8 @@ FROM eclipse-temurin:21-jdk-jammy
 # Set working directory inside container
 WORKDIR /app
 
-# Copy the built jar (assuming you commit only one jar like target/app.jar)
-COPY target/*.jar app.jar
+# Copy jar from repo root into container
+COPY app.jar app.jar
 
 # Expose Spring Boot default port
 EXPOSE 8080
